@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le site du resto">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Le Resto - Accueil</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <a href="#" class="scroll-haut">▲</a>
+
+    <header>
+        <div class="headerNav">
+                <h1>Le RESTO</h1>
+            <nav class="desktop-nav">
+                    <a href="./index.html">Accueil</a>
+                    <a href="./menu.html">Menu</a>
+                    <a href="/le-resto.html">Le Resto</a>
+                    <a href="./contact.html">Contact</a>
+            </nav>
+        </div>
+       <div id="burger">
+
+            <button id="open" type="button">≡</button>
+            <button id="close" type="button">×</button>
+
+            <nav class="burger-nav">
+                <a href="./index.html">Accueil</a>
+                <a href="./menu.html">Menu</a>
+                <a href="/le-resto.html">Le Resto</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="overlay">
+                <h2>Convivial & raffiné</h2>
+                <button class="CTA-button">Réserver</button>
+            </div>
+        </div>
+        <section id="about">
+            <h2>Qui sommes nous ?</h2>
+            <p>Le Resto est un restaurant à Besançon qui vous accueille dans un cadre soigné et chaleureux, au cœur de la ville. 
+            Pensé comme un lieu de rencontre et de plaisir, il propose une cuisine contemporaine aux accents raffinés, où l’attention portée 
+            aux détails se ressent dès les premières assiettes.<br><br>
+            Idéal pour un déjeuner ou un dîner à Besançon, Le Resto s’adresse à celles et ceux qui recherchent une expérience culinaire à 
+            la fois élégante et accessible, dans une ambiance conviviale et authentique.</p>
+        </section>
+        <section id="meal-event">
+            <h2>Le plat du moment</h2>
+            <div class="meal-event-card">
+                <div class="meal-caption">
+                    <h3>Poulet à la méditéranéenne</h3>                    
+                </div>
+            </div>
+        </section>
+    </main>
+    
+<script src="./js/main.js"></script>
+<script src="./js/burger.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-RO1kY+Zngt87n8eWkEMQe8wVJr2kU8z0G6i0RS3m6ELnU6z0mI1w7bXr+9p6z9+4+" crossorigin="anonymous"></script>
+</body>
+</html>

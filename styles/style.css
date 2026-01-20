@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  color: #F5F3EE;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #151517;
+  background-image: url("../images/dark_noise_texture.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: #F5F3EE;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url("../../images/resto.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  z-index: 1;
+}
+.banner .overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.banner .overlay .CTA-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #C6A75E;
+  color: #F5F3EE;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.banner .overlay .CTA-button:hover {
+  background-color: rgb(177.9862385321, 143.7155963303, 63.0137614679);
+}
+
+#burger {
+  display: block;
+}
+
+#open,
+#close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #C6A75E;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+  line-height: 1;
+}
+
+#open {
+  display: block;
+}
+
+#close {
+  display: none;
+}
+
+.burger-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+.burger-nav.active {
+  transform: translateX(0);
+}
+.burger-nav a {
+  color: #F5F3EE;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  transition: color 0.3s ease;
+}
+.burger-nav a:active {
+  color: #C6A75E;
+}
+
+.desktop-nav {
+  display: none !important;
+}
+
+@media screen and (min-width: 1000px) {
+  #burger {
+    display: none !important;
+  }
+  .desktop-nav {
+    display: flex !important;
+  }
+}
+.scroll-haut {
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 6;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  font-size: 30px;
+  background-color: black;
+  color: #C6A75E;
+  width: 50px;
+  height: 50px;
+  border-radius: 1rem;
+  text-align: center;
+  border: 3px solid #C6A75E;
+  animation: fade;
+  animation-timeline: scroll(y);
+  animation-range: 0 10%;
+}
+
+header {
+  width: 100%;
+  height: 6rem;
+  position: relative;
+}
+header .headerNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: #F5F3EE;
+  position: relative;
+  z-index: 100;
+}
+header .headerNav h1 {
+  font-size: 2rem;
+}
+header .headerNav .desktop-nav {
+  display: none;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+header .headerNav .desktop-nav a {
+  text-decoration: none;
+  color: #F5F3EE;
+  font-size: 1.2rem;
+}
+header .headerNav .desktop-nav a:hover {
+  color: #C6A75E;
+}
+@media screen and (min-width: 1000px) {
+  header .headerNav .desktop-nav {
+    display: flex !important;
+  }
+}
+
+#about {
+  margin-top: 3rem;
+  text-align: center;
+}
+#about p {
+  margin-top: 2rem;
+}
+
+#meal-event h2 {
+  margin-bottom: 2rem;
+}
+#meal-event .meal-event-card {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 2rem;
+  background-image: url("../../images/fajitas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#meal-event .meal-event-card .meal-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #C6A75E;
+  padding: 1rem 2rem;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
