@@ -10,13 +10,14 @@
 }
 
 #meal-event{
+
     h2{
         margin-bottom: 2rem;
     }
 
     .meal-event-card{
         width: 100%;
-        height: 600px;
+        height: 350px;
         margin-bottom: 2rem;
         background-image: url('../../images/fajitas.jpg');
         background-size: cover;
@@ -35,5 +36,13 @@
             padding: 1rem 2rem;
             text-align: center;
         }
+    }
+
+    @media screen and (min-width: 744px) {
+        
+        .meal-event-card{
+            height: 600px;
+        }
+
     }
 }
