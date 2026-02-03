@@ -1,0 +1,139 @@
+@import './colors';
+
+.carousel {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+
+    .carousel-inner {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+        .carousel-item {
+            // Mobile first: commence par mobile
+            height: 250px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .carousel-caption {
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 0.75rem;
+                border-radius: 8px;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0.5rem;
+                width: auto;
+                width: 100%;
+
+                .title-carousel {
+                    color: $golden;
+                    font-size: 1rem;
+                    margin: 0;
+                    font-weight: 600;
+                }
+            }
+
+            // Tablette
+            @media (min-width: 576px) {
+                height: 300px;
+
+                .carousel-caption {
+                    padding: 1rem;
+                    bottom: 1rem;
+                    max-width: 80%;
+
+                    .title-carousel {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+
+            // Desktop small
+            @media (min-width: 768px) {
+                height: 400px;
+
+                .carousel-caption {
+                    padding: 1.5rem;
+                    bottom: 2rem;
+
+                    .title-carousel {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            // Desktop large
+            @media (min-width: 992px) {
+                height: 500px;
+
+                .carousel-caption {
+                    .title-carousel {
+                        font-size: 1.75rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // Contrôles
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @media (min-width: 768px) {
+            width: 5%;
+        }
+    }
+
+    // Indicateurs
+    .carousel-indicators {
+        margin-bottom: 0.5rem;
+
+        button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+            background-color: transparent;
+            opacity: 0.6;
+
+            &.active {
+                background-color: $golden;
+                opacity: 1;
+                border-color: $golden;
+            }
+        }
+
+        @media (min-width: 576px) {
+            margin-bottom: 1rem;
+
+            button {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // Container max-width sur grand écran
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+}
