@@ -1,0 +1,25 @@
+@import './colors';
+
+#story, #team{
+    margin-top: 2rem;
+    text-align: center;
+
+    h2{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    p{
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-align: center;
+    }
+}
+
+#team{
+    .teamPics{
+        width : 90%;
+        margin: 2rem auto;
+        height: auto;
+    }
+}
