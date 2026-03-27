@@ -38,6 +38,12 @@
             margin: 1rem 0;
             border: 1px solid white;
 
+            a{
+                color: $text;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
         }
 
     }
