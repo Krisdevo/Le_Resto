@@ -208,6 +208,7 @@ header .headerNav .desktop-nav a {
   text-decoration: none;
   color: #F5F3EE;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 header .headerNav .desktop-nav a:hover {
   color: #C6A75E;
@@ -268,6 +269,9 @@ footer .social_nav {
   align-items: center;
   gap: 2rem;
   padding-top: 1.5rem;
+}
+footer .social_nav a {
+  cursor: pointer;
 }
 footer .social_nav a img {
   width: 3rem;
