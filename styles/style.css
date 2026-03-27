@@ -438,4 +438,22 @@ footer p {
   border-radius: 10px;
   margin: 1rem 0;
   border: 1px solid white;
+}
+
+@media screen and (min-width: 768px) {
+  .card_container .card {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .card_container .card {
+    margin-top: 1.5rem;
+    width: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */
