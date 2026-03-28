@@ -82,6 +82,11 @@ section {
 .banner .overlay .CTA-button:hover {
   background-color: rgb(177.9862385321, 143.7155963303, 63.0137614679);
 }
+.banner .overlay .CTA-button a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
 
 #burger {
   display: block;
@@ -459,7 +464,7 @@ footer p {
 
 @media screen and (min-width: 768px) {
   .card_container .card {
-    width: 60%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -530,6 +535,10 @@ footer p {
   #values .card_value_container .card_value {
     width: 60%;
   }
+  #values .card_value_container .card_value img {
+    width: 40%;
+    height: auto;
+  }
 }
 @media screen and (min-width: 1024px) {
   #values .card_value_container {
@@ -542,10 +551,6 @@ footer p {
     margin-top: 1.5rem;
     width: 30%;
     min-height: 450px;
-  }
-  #values .card_value_container .card_value img {
-    width: 50%;
-    height: auto;
   }
 }
 
@@ -597,5 +602,88 @@ footer p {
   #infos .info_box {
     flex-direction: row;
     width: 100%;
+  }
+}
+
+#reservation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#reservation .contact-container {
+  width: 100%;
+}
+#reservation .contact-container h3 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+#reservation .contact-container form {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-color: black;
+  border: 1px solid #C6A75E;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+#reservation .contact-container form .success-alert {
+  color: rgb(26, 147, 26);
+  background-color: rgb(128, 219, 145);
+  border: 1px solid rgb(26, 147, 26);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+#reservation .contact-container form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+#reservation .contact-container form .form-group label,
+#reservation .contact-container form .form-group span {
+  color: #C6A75E;
+}
+#reservation .contact-container form .form-group input {
+  width: 100%;
+  border-radius: 0.5rem;
+  color: black !important;
+}
+#reservation .contact-container form .form-group textarea {
+  color: black !important;
+  width: 100%;
+  border-radius: 0.5rem;
+  min-height: 200px;
+}
+#reservation .contact-container form .form-group .success-message {
+  color: rgb(26, 147, 26);
+}
+#reservation .contact-container form .form-group .error-message {
+  color: rgb(190, 40, 40);
+}
+#reservation .contact-container form button {
+  background-color: #C6A75E;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+#reservation .contact-container form .error-message {
+  color: rgb(190, 40, 40);
+}
+@media screen and (min-width: 678px) {
+  #reservation .contact-container {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #reservation .contact-container {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */

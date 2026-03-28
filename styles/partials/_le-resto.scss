@@ -69,6 +69,12 @@
 
             .card_value {
                 width: 60%;
+
+                
+                img{
+                    width: 40%;
+                    height: auto;
+                }
             }
 
         }
@@ -87,11 +93,6 @@
                 margin-top: 1.5rem;
                 width: 30%;
                 min-height: 450px;
-
-                img{
-                    width: 50%;
-                    height: auto;
-                }
             }
 
         }

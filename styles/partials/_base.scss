@@ -87,6 +87,12 @@ section{
             background-color: darken($golden, 10%);
         }
 
+        a{
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
     }
 }
 }

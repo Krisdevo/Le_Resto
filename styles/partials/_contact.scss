@@ -1,17 +1,17 @@
 @import "./colors";
 
-#infos{
+#infos {
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    h2{
+    h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
 
-    .info_box{
+    .info_box {
 
         display: flex;
         flex-direction: column;
@@ -19,32 +19,32 @@
         color: white;
         width: 100%;
         border-radius: 1rem;
-        gap : 1rem;
+        gap: 1rem;
 
-        .info_group{
+        .info_group {
 
             padding: 1rem;
 
 
-            .info_item{
+            .info_item {
 
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap : 1rem;
+                gap: 1rem;
                 margin: 1.5rem 0;
 
-                img{
+                img {
                     width: 50px;
                     height: 50px;
                 }
 
-                a{
+                a {
                     text-decoration: none;
                     color: white;
                 }
 
-                iframe{
+                iframe {
                     border-radius: 0 0 1rem 1rem;
                 }
             }
@@ -52,18 +52,129 @@
     }
 
     @media screen and (min-width: 678px) {
-        
-        .info_box{
+
+        .info_box {
             width: 75%;
         }
     }
 
     @media screen and (min-width: 1024px) {
 
-        .info_box{
+        .info_box {
             flex-direction: row;
             width: 100%;
         }
+
+    }
+}
+
+#reservation {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .contact-container {
+        width: 100%;
+
+
+
+        h3 {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+
+
+        form {
+
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            background-color: black;
+            border: 1px solid $golden;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+
+            .success-alert {
+                color: rgb(26, 147, 26);
+                background-color: rgb(128, 219, 145);
+                border: 1px solid rgb(26, 147, 26);
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                width: 100%;
+            }
+
+            .form-group {
+
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+
+                label,
+                span {
+                    color: $golden;
+                }
+
+                input {
+                    width: 100%;
+                    border-radius: 0.5rem;
+                    color: black !important;
+                }
+
+                textarea {
+                    color: black !important;
+                    width: 100%;
+                    border-radius: 0.5rem;
+                    min-height: 200px;
+                }
+
+
+
+                .success-message {
+                    color: rgb(26, 147, 26);
+                }
+
+                .error-message {
+                    color: rgb(190, 40, 40);
+                }
+            }
+
+            button {
+                background-color: $golden;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+            }
+
+
+
+            .error-message {
+                color: rgb(190, 40, 40);
+            }
+        }
+    }
+
+    @media screen and (min-width: 678px) {
+
+        .contact-container {
+            width: 75%;
+
+        }
         
     }
+
+        @media screen and (min-width: 1024px) {
+    
+            .contact-container {
+                width: 50%;
+            }
+        }
 }
