@@ -1,0 +1,69 @@
+@import "./colors";
+
+#infos{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .info_box{
+
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        width: 100%;
+        border-radius: 1rem;
+        gap : 1rem;
+
+        .info_group{
+
+            padding: 1rem;
+
+
+            .info_item{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap : 1rem;
+                margin: 1.5rem 0;
+
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+
+                iframe{
+                    border-radius: 0 0 1rem 1rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 678px) {
+        
+        .info_box{
+            width: 75%;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+
+        .info_box{
+            flex-direction: row;
+            width: 100%;
+        }
+        
+    }
+}
