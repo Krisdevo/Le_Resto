@@ -541,6 +541,10 @@ footer p {
   #values .card_value_container .card_value {
     margin-top: 1.5rem;
     width: 30%;
-    min-height: 504px;
+    min-height: 450px;
+  }
+  #values .card_value_container .card_value img {
+    width: 50%;
+    height: auto;
   }
 }/*# sourceMappingURL=style.css.map */
