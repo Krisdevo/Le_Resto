@@ -474,15 +474,18 @@ footer p {
     width: 30%;
   }
 }
-#story, #team {
+#story,
+#team {
   margin-top: 2rem;
   text-align: center;
 }
-#story h2, #team h2 {
+#story h2,
+#team h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-#story p, #team p {
+#story p,
+#team p {
   margin-top: 2rem;
   font-size: 1.2rem;
   line-height: 1.8;
@@ -493,4 +496,51 @@ footer p {
   width: 100%;
   margin: 2rem auto;
   height: auto;
+}
+
+#values h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+#values .card_value_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#values .card_value_container .card_value {
+  background-color: black;
+  border: 1px solid #C6A75E;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#values .card_value_container .card_value h3 {
+  margin: 1rem 0;
+}
+#values .card_value_container .card_value img {
+  width: 75%;
+  height: auto;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  #values .card_value_container .card_value {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #values .card_value_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  #values .card_value_container .card_value {
+    margin-top: 1.5rem;
+    width: 30%;
+    min-height: 504px;
+  }
 }/*# sourceMappingURL=style.css.map */

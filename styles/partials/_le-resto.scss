@@ -1,14 +1,16 @@
 @import './colors';
 
-#story, #team{
+#story,
+#team {
     margin-top: 2rem;
     text-align: center;
 
-    h2{
+    h2 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }
-    p{
+
+    p {
         margin-top: 2rem;
         font-size: 1.2rem;
         line-height: 1.8;
@@ -16,10 +18,77 @@
     }
 }
 
-#team{
-    .teamPics{
-        width : 100%;
+#team {
+    .teamPics {
+        width: 100%;
         margin: 2rem auto;
         height: auto;
+    }
+}
+
+#values {
+
+    h2 {
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+
+
+    .card_value_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        .card_value {
+            background-color: black;
+            border: 1px solid $golden;
+            padding: 1rem;
+            border-radius: 1rem;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                margin: 1rem 0;
+            }
+
+            img {
+                width: 75%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+
+        .card_value_container {
+
+            .card_value {
+                width: 60%;
+            }
+
+        }
+
+    }
+
+    @media screen and (min-width: 1024px) {
+
+        .card_value_container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+
+            .card_value {
+                margin-top: 1.5rem;
+                width: 30%;
+                min-height: 504px;
+            }
+
+        }
     }
 }
