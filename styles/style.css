@@ -619,6 +619,10 @@ footer p {
   font-size: 2rem;
   margin: 2rem 0;
 }
+#reservation .contact-container p {
+  text-align: center;
+  margin: 2rem 0;
+}
 #reservation .contact-container form {
   width: 100% !important;
   display: flex;
