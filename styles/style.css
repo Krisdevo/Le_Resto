@@ -43,7 +43,7 @@ section {
   position: relative;
   width: 100%;
   height: 400px;
-  background-image: url("../../images/resto.webp");
+  background-image: url("../images/resto.webp");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -269,7 +269,7 @@ header .headerNav .desktop-nav .active {
   width: 100%;
   height: 350px;
   margin-bottom: 2rem;
-  background-image: url("../../images/fajitas.jpg");
+  background-image: url("../images/fajitas.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
