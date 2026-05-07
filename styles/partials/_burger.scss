@@ -67,6 +67,28 @@
 	display: none !important;
 }
 
+.desktop-nav a,
+.burger-nav a {
+	position: relative;
+	transition: color 0.3s ease;
+
+	// Trait en dessous
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 0; 
+		height: 2px;
+		background-color: $golden;
+		transition: width 0.3s ease; 
+	}
+
+	&:hover::after {
+		width: 100%; 
+	}
+}
+
 
 @media screen and (min-width: 1000px) {
 

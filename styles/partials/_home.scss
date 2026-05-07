@@ -1,23 +1,23 @@
 @import './colors';
 
-#about{
+#about {
     margin-top: 3rem;
     text-align: center;
 
-    p{
+    p {
         margin-top: 2rem;
         font-size: 1.2rem;
         line-height: 1.8;
     }
 }
 
-#meal-event{
+#meal-event {
 
-    h2{
+    h2 {
         margin-bottom: 2rem;
     }
 
-    .meal-event-card{
+    .meal-event-card {
         width: 100%;
         height: 350px;
         margin-bottom: 2rem;
@@ -26,8 +26,12 @@
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
+        overflow: hidden; // Important pour le zoom
+        border-radius: 1rem;
+        transition: transform 0.4s ease,
+            box-shadow 0.4s ease;
 
-        .meal-caption{
+        .meal-caption {
             position: absolute;
             bottom: 0;
             width: 100%;
@@ -37,12 +41,23 @@
             color: $golden;
             padding: 1rem 2rem;
             text-align: center;
+            transition: background-color 0.4s ease;
+        }
+
+        &:hover {
+            transform: scale(1.03); // Zoom léger
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+            .meal-caption {
+                background-color: rgba($golden, 0.9); // Fond doré
+                color: black;
+            }
         }
     }
 
     @media screen and (min-width: 744px) {
-        
-        .meal-event-card{
+
+        .meal-event-card {
             height: 600px;
         }
 
