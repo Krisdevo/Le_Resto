@@ -262,6 +262,115 @@ header .headerNav .desktop-nav .active {
   line-height: 1.8;
 }
 
+#horaires {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+#horaires .CTA-button {
+  margin-top: 2rem;
+  background-color: #C6A75E;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#horaires .CTA-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+#horaires .CTA-button:active {
+  transform: scale(0.98);
+}
+#horaires .CTA-button a {
+  transition: color 0.3s ease;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+#horaires .horaires-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 700px;
+  margin: 1rem auto;
+}
+#horaires .horaires-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  background-color: black;
+  border: 1px solid #C6A75E;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+#horaires .horaire-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+#horaires .horaire-item .jour {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #C6A75E;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+#horaires .horaire-item .services {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+#horaires .horaire-item .service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+#horaires .horaire-item .service .service-label {
+  color: #aaa;
+  font-size: 0.9rem;
+  min-width: 40px;
+  text-align: left;
+}
+#horaires .horaire-item .service .service-hours {
+  color: white;
+  font-size: 0.95rem;
+}
+#horaires .horaire-item.ferme {
+  opacity: 0.5;
+}
+#horaires .horaire-item.ferme .service-hours {
+  color: #ccc;
+  font-style: italic;
+}
+#horaires .horaires-separator {
+  width: 1px;
+  height: 80px;
+  background-color: #C6A75E;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  #horaires .horaires-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  #horaires .horaires-separator {
+    width: 80px;
+    height: 1px;
+  }
+  #horaires .horaire-item .service {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
 #meal-event h2 {
   margin-bottom: 2rem;
 }
@@ -539,12 +648,19 @@ footer p {
   text-align: center;
 }
 
+#team {
+  border: 4px solid #C6A75E;
+  border-radius: 0.5rem;
+}
 #team .teamPics {
   width: 100%;
   margin: 2rem auto;
   height: auto;
 }
 
+#values {
+  margin-top: 2rem;
+}
 #values h2 {
   margin-bottom: 2rem;
   font-size: 2.5rem;

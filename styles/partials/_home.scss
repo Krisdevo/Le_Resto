@@ -11,6 +11,154 @@
     }
 }
 
+#horaires {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    .CTA-button {
+
+            margin-top: 2rem;
+            background-color: $golden;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05); // Grossit de 5%
+                box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+            }
+
+            &:active {
+                transform: scale(0.98); // Petit effet "clic"
+            }
+
+            a {
+                transition: color 0.3s ease;
+                color: white;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+
+    // ----------------------------------------
+    // CONTAINER PRINCIPAL
+    // ----------------------------------------
+    .horaires-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        max-width: 700px;
+        margin: 1rem auto;
+    }
+
+    // ----------------------------------------
+    // GRILLE : jours ouvrés | séparateur | lundi
+    // ----------------------------------------
+    .horaires-grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        width: 100%;
+        background-color: black;
+        border: 1px solid $golden;
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    // ----------------------------------------
+    // CHAQUE BLOC DE JOUR
+    // ----------------------------------------
+    .horaire-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+
+        // Nom du jour : "Mardi – Dimanche"
+        .jour {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $golden;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        // Container des services midi/soir
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        // Ligne individuelle : "Midi  12h00 – 14h30"
+        .service {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            .service-label {
+                color: #aaa; // Gris clair pour le label
+                font-size: 0.9rem;
+                min-width: 40px;
+                text-align: left;
+            }
+
+            .service-hours {
+                color: white;
+                font-size: 0.95rem;
+            }
+        }
+
+        // ----------------------------------------
+        // VARIANTE : Lundi fermé
+        // ----------------------------------------
+        &.ferme {
+            opacity: 0.5; // Estompé pour signifier la fermeture
+
+            .service-hours {
+                color: #ccc;
+                font-style: italic;
+            }
+        }
+    }
+
+    // ----------------------------------------
+    // SÉPARATEUR VERTICAL
+    // ----------------------------------------
+    .horaires-separator {
+        width: 1px;
+        height: 80px;
+        background-color: $golden;
+        opacity: 0.4;
+        flex-shrink: 0;
+    }
+
+
+    @media (max-width: 600px) {
+        .horaires-grid {
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        .horaires-separator {
+            width: 80px;
+            height: 1px; 
+        }
+
+        .horaire-item .service {
+            justify-content: center;
+            gap: 0.5rem;
+        }
+    }
+}
+
 #meal-event {
 
     h2 {

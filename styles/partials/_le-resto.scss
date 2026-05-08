@@ -19,6 +19,10 @@
 }
 
 #team {
+
+    border: 4px solid $golden;
+    border-radius: 0.5rem;
+
     .teamPics {
         width: 100%;
         margin: 2rem auto;
@@ -27,6 +31,8 @@
 }
 
 #values {
+
+    margin-top: 2rem;
 
     h2 {
         margin-bottom: 2rem;
